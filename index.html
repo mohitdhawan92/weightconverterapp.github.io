@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Weight Converter</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <script> 
+        function check(){
+
+            var x;
+            x = document.getElementById('kg').value;
+
+            var num;
+            num = x*1000;
+            document.getElementById('gram').value = num;
+
+            num = x*1000000;
+            document.getElementById('milligram').value= num;
+
+            num = x*2.2046;
+            document.getElementById('pound').value = num;
+
+            num = x*0.0011023;
+            document.getElementById('ton').value = num;
+
+            num = x*35.274;
+            document.getElementById('ounce').value = num;
+        }
+        </script>
+
+    </head>
+    <body style="background-color: pink;">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <h1 align="center">WEIGHT CONVERTER APP</h1>
+
+        <p align="center">Fill the kg field to obtain other weight in change. </p>
+    <form align="center">
+        <table align="center">
+            <tr>
+                <td><label>Weight in KG:</label> </td>
+                <td><input type="number" name="in_kg" id="kg" placeholder="weight in kg"></td>
+                <td><input type="button" value="Convert" name="submit" onclick="check()"> </td>
+            </tr>
+
+            <tr>
+                <td><label>Weight in Gram:</label> </td>
+                <td><input type="number"  name="in_gram" id="gram" placeholder="weight in gram"></td>
+                </tr>
+
+                <tr>
+                    <td><label>Weight in Milligram:</label> </td>
+                    <td><input type="number" name="in_milligram" id="milligram" placeholder="weight in milligram"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label>Weight in Pound:</label> </td>
+                        <td><input type="number" name="in_pound" id="pound" placeholder="weight in pound"></td>
+                        </tr>
+
+                        <tr>
+                            <td><label>Weight in Ton:</label> </td>
+                            <td><input type="number" name="in_ton" id="ton" placeholder="weight in ton"></td>
+                            </tr>
+
+                            <tr>
+                                <td><label>Weight in Ounce:</label> </td>
+                                <td><input type="number" name="in_ounce" id="ounce" placeholder="weight in ounce"></td>
+                                </tr>     
+        </table>
+         <input type="reset" name="Reset" value="RESET FORM">
+    </form>
+    </body>
+</html>
